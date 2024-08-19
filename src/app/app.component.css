@@ -1,0 +1,6 @@
+app-chess-board {
+    display: block;
+    min-height: 400px; /* Установите минимальную высоту */
+    width: 100%;
+  }
+  

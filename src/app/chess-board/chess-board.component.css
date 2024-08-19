@@ -1,0 +1,25 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    width: 400px; /* Добавьте ширину */
+    height: 400px; /* Добавьте высоту */
+  }
+  
+  .square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+  
+  .black {
+    background-color: #769656;
+  }
+  
+  .white {
+    background-color: #eeeed2;
+  }
+  

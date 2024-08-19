@@ -1,0 +1,10 @@
+<div class="board">
+    <div *ngFor="let row of board; let rowIndex = index">
+      <div *ngFor="let square of row; let colIndex = index"
+           class="square"
+           [ngClass]="{'black': (rowIndex + colIndex) % 2 !== 0, 'white': (rowIndex + colIndex) % 2 === 0}">
+        {{ square ? square.type + square.color : '' }}
+      </div>
+    </div>
+  </div>
+  
