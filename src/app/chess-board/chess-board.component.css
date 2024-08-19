@@ -1,25 +1,63 @@
+.board-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 0;
+  justify-items: start;
+  align-items: start;
+}
+
 .board {
-    display: grid;
-    grid-template-columns: repeat(8, 50px);
-    grid-template-rows: repeat(8, 50px);
-    width: 400px; /* Добавьте ширину */
-    height: 400px; /* Добавьте высоту */
-  }
-  
-  .square {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-  }
-  
-  .black {
-    background-color: #769656;
-  }
-  
-  .white {
-    background-color: #eeeed2;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+}
+
+.numbers-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 4px;
+  height: 400px; /* Высота должна совпадать с высотой доски */
+}
+
+.number {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.letters-row {
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: space-between;
+  width: 400px; /* Ширина должна совпадать с шириной доски */
+  margin-top: 4px;
+}
+
+.letter {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+}
+
+.black {
+  background-color: #769656;
+}
+
+.white {
+  background-color: #eeeed2;
+}

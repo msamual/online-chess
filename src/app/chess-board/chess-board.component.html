@@ -1,4 +1,13 @@
-<div class="board">
+<div class="board-container">
+  <!-- Нумерация строк слева -->
+  <div class="numbers-column">
+    <div *ngFor="let num of [8, 7, 6, 5, 4, 3, 2, 1]" class="number">
+      {{ num }}
+    </div>
+  </div>
+
+  <!-- Шахматная доска -->
+  <div class="board">
     <div *ngFor="let row of board; let rowIndex = index">
       <div *ngFor="let square of row; let colIndex = index"
            class="square"
@@ -7,4 +16,11 @@
       </div>
     </div>
   </div>
-  
+
+  <!-- Нумерация столбцов снизу -->
+  <div class="letters-row">
+    <div *ngFor="let letter of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']" class="letter">
+      {{ letter }}
+    </div>
+  </div>
+</div>
