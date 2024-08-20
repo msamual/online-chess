@@ -2,15 +2,20 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr auto;
-  gap: 0;
-  justify-items: start;
-  align-items: start;
+  justify-content: center;
+  position: relative;
+  width: 400px;
 }
 
 .board {
-  display: grid;
-  grid-template-columns: repeat(8, 50px);
-  grid-template-rows: repeat(8, 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.board-row {
+  display: flex;
+  flex-direction: row;
 }
 
 .numbers-column {
@@ -18,7 +23,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin-right: 4px;
-  height: 400px; /* Высота должна совпадать с высотой доски */
+  height: 400px;
 }
 
 .number {
@@ -33,7 +38,7 @@
   grid-column: 2 / 3;
   display: flex;
   justify-content: space-between;
-  width: 400px; /* Ширина должна совпадать с шириной доски */
+  width: 400px; /* Ширина строки с буквами соответствует ширине доски */
   margin-top: 4px;
 }
 
@@ -60,4 +65,10 @@
 
 .white {
   background-color: #eeeed2;
+}
+
+.piece {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Чтобы изображение сохраняло пропорции */
 }

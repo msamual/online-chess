@@ -16,6 +16,8 @@ export class ChessBoardComponent {
   constructor() {
     this.chess = new Chess(); // Вызов Chess как функции
     this.board = this.chess.board();
+    console.log(this.board);
+    console.log(this.board.slice()[0]);
   }
 
   movePiece(from: string, to: string): void {
@@ -33,6 +35,14 @@ export class ChessBoardComponent {
 
   ngOnInit(): void {
     this.updateBoard();
+  }
+
+  getImageForPiece(square: any): string {
+    if (!square) {
+      return '';
+    }
+  
+    return `images/${square.color}${square.type}.png`;
   }
   
 }
