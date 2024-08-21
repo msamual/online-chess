@@ -1,0 +1,11 @@
+name: "online-chess workflow"
+on: 
+  push:
+    branches: ["main"]
+jobs:
+  compose:
+    runs-on: ServerHolland
+    steps:
+      - run: git pull
+      - run: docker-compose down
+      - run: docker-compose up
