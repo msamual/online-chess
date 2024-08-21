@@ -8,4 +8,4 @@ jobs:
     steps:
       - run: git pull
       - run: docker-compose down
-      - run: docker-compose up
+      - run: docker-compose up -d
