@@ -4,7 +4,7 @@ on:
     branches: ["main"]
 jobs:
   compose:
-    runs-on: holland
+    runs-on: [holland, linux, ARM64]
     steps:
       - run: git pull
       - run: docker-compose down
