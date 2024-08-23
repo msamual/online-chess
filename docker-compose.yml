@@ -10,6 +10,15 @@ services:
       - "8080:80"  # Пробрасываем порт 80 из контейнера на порт 80 хоста
     restart: unless-stopped  # Автоматический рестарт контейнера в случае падения
 
+  back:
+    image: chess-server:latest
+    build:
+      context: back/ChessServer
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    restart: unless-stopped
+
 networks:
   default:
     driver: bridge

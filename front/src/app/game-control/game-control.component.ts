@@ -1,5 +1,6 @@
 // game-control.component.ts
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { GameService } from '../GameService';
 
 @Component({
   selector: 'app-game-control',
@@ -7,17 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./game-control.component.css'],
   standalone: true
 })
+
 export class GameControlComponent {
-  // Удалите инъекцию через конструктор
-  constructor() {
-    // Доступ к компоненту `ChessBoardComponent` напрямую не поддерживается
-  }
+  
+  @Output() newGameEvent = new EventEmitter<void>();
+  @Output() undoMoveEvent = new EventEmitter<void>();
+
+  constructor(private gameService: GameService) {}
 
   newGame(): void {
-    // Логика для новой игры
+    this.gameService.startNewGame();
   }
 
   undoMove(): void {
-    // Логика для отмены хода
+    this.gameService.undoLastMove();
   }
 }

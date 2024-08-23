@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Chess } from 'chess.js'; // Импортируем Chess как функцию
 import { CommonModule } from '@angular/common';
+import { GameService } from '../GameService';
+import { WebSocketService } from '../WebSocket';
 
 @Component({
   selector: 'app-chess-board',
@@ -9,12 +11,13 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule]
 })
+
 export class ChessBoardComponent {
   private chess: any;
   public board: any[][];
   private draggedFrom: { row: number, col: number } | null = null;
 
-  constructor() {
+  constructor(private gameService: GameService, private webSocketService: WebSocketService) {
     this.chess = new Chess(); // Вызов Chess как функции
     this.board = this.chess.board();
   }
@@ -22,6 +25,7 @@ export class ChessBoardComponent {
   movePiece(from: string, to: string): void {
     const move = this.chess.move({ from, to });
     if (move) {
+      this.webSocketService.sendMove(move); // Отправка хода на сервер
       this.updateBoard();
     } else {
       alert('Invalid move!');
@@ -33,7 +37,10 @@ export class ChessBoardComponent {
   }
 
   ngOnInit(): void {
-    this.updateBoard();
+    this.webSocketService.onMoveReceived().subscribe((move: any) => {
+      this.chess.move(move);
+      this.updateBoard();
+    });
   }
 
   onDragStart(event: DragEvent, row: number, col: number): void {
@@ -75,4 +82,13 @@ export class ChessBoardComponent {
     return `images/${square.color}${square.type}.png`;
   }
   
+  newGame(){
+    this.chess.reset();
+    this.updateBoard();
+  }
+
+  undoMove(){
+    this.chess.undo();
+    this.updateBoard();
+  }
 }
