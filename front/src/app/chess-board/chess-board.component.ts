@@ -12,12 +12,11 @@ import { CommonModule } from '@angular/common';
 export class ChessBoardComponent {
   private chess: any;
   public board: any[][];
+  private draggedFrom: { row: number, col: number } | null = null;
 
   constructor() {
     this.chess = new Chess(); // Вызов Chess как функции
     this.board = this.chess.board();
-    console.log(this.board);
-    console.log(this.board.slice()[0]);
   }
 
   movePiece(from: string, to: string): void {
@@ -35,6 +34,37 @@ export class ChessBoardComponent {
 
   ngOnInit(): void {
     this.updateBoard();
+  }
+
+  onDragStart(event: DragEvent, row: number, col: number): void {
+    this.draggedFrom = { row, col };
+    
+    // Прозрачное изображение, чтобы скрыть стандартное перетаскивание
+    const img = new Image();
+    img.src = 'images/transparent.png';
+    event.dataTransfer!.setDragImage(img, 0, 0);
+
+    event.dataTransfer!.effectAllowed = 'move';
+}
+
+  onDragOver(event: DragEvent): void {
+    event.preventDefault(); // Нужно, чтобы разрешить событие drop
+    event.dataTransfer!.dropEffect = 'move';
+  }
+
+  onDrop(event: DragEvent, row: number, col: number): void {
+    if (this.draggedFrom) {
+     const from = this.convertToChessNotation(this.draggedFrom.row, this.draggedFrom.col);
+     const to = this.convertToChessNotation(row, col);
+     this.movePiece(from, to);
+     this.updateBoard();
+     this.draggedFrom = null;
+    }
+  }
+
+  convertToChessNotation(row: number, col: number): string {
+    const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+    return letters[col] + (8 - row);
   }
 
   getImageForPiece(square: any): string {

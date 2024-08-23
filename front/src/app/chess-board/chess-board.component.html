@@ -10,9 +10,12 @@
   <div class="board">
     <div *ngFor="let row of board.slice(); let rowIndex = index" class="board-row">
       <div *ngFor="let square of row; let colIndex = index"
-           class="square"
-           [ngClass]="{'black': (rowIndex + colIndex) % 2 !== 0, 'white': (rowIndex + colIndex) % 2 === 0}">
-           <img *ngIf="square" [src]="getImageForPiece(square)" class="piece" alt="chess piece">
+            class="square"
+            [ngClass]="{'black': (rowIndex + colIndex) % 2 !== 0, 'white': (rowIndex + colIndex) % 2 === 0}"
+            (drag)="onDragStart($event, rowIndex, colIndex)"
+            (dragover)="onDragOver($event)"
+            (drop)="onDrop($event, rowIndex, colIndex)">
+           <img *ngIf="square" [src]="getImageForPiece(square)" class="piece" alt="chess piece" draggable="true">
       </div>
     </div>
   </div>

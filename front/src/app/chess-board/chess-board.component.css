@@ -68,7 +68,14 @@
 }
 
 .piece {
+  pointer-events: auto;
+  cursor: move;
   width: 100%;
   height: 100%;
   object-fit: contain; /* Чтобы изображение сохраняло пропорции */
+}
+
+.piece:active {
+  opacity: 1; /* Сохраняет полную непрозрачность */
+  cursor: grab; /* Сохраняет курсор */
 }
