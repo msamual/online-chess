@@ -37,6 +37,8 @@ export class ChessBoardComponent {
   }
 
   ngOnInit(): void {
+    this.gameService.newGame$.subscribe(()=>this.newGame())
+    this.gameService.undoMove$.subscribe(()=>this.undoMove())
     this.webSocketService.onMoveReceived().subscribe((move: any) => {
       this.chess.move(move);
       this.updateBoard();

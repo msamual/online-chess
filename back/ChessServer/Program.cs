@@ -35,7 +35,7 @@ static async Task HandleWebSocketAsync(WebSocket webSocket)
 
 	while (!result.CloseStatus.HasValue)
 	{
-		var serverMsg = Encoding.UTF8.GetBytes("Message received at server");
+		var serverMsg = Encoding.UTF8.GetBytes("d7-d5");
 		await webSocket.SendAsync(new ArraySegment<byte>(serverMsg, 0, serverMsg.Length), result.MessageType, result.EndOfMessage, CancellationToken.None);
 
 		result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);

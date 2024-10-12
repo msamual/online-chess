@@ -16,7 +16,7 @@ WORKDIR /app
 COPY --from=build-env /app/out .
 
 # Экспонируем порт 80
-EXPOSE 80
+EXPOSE 5058 7208
 
 # Запускаем приложение
-ENTRYPOINT ["dotnet", "YourProjectName.dll"]
+ENTRYPOINT ["dotnet", "ChessServer.dll"]

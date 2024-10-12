@@ -16,7 +16,8 @@ services:
       context: back/ChessServer
       dockerfile: Dockerfile
     ports:
-      - "5000:80"
+      - "7208:443"
+      - "5058:80"
     restart: unless-stopped
 
 networks:
