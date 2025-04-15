@@ -1,8 +1,56 @@
 {
   "version": 2,
-  "dgSpecHash": "prcjNsHoGPmoOLTmvOtmgscKZuMbkzSaML83h+wDi+baLfENdJdTfe4tR6TYacyiQ22s0c6ySA+5+ouL84pY1w==",
+  "dgSpecHash": "LvI7EqmJNDQ=",
   "success": true,
-  "projectFilePath": "F:\\Projects\\online-chess\\back\\ChessServer\\ChessServer.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "/Users/msamual/projects/online-chess/back/ChessServer/ChessServer.csproj",
+  "expectedPackageFiles": [
+    "/Users/msamual/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/7.0.11/microsoft.aspnetcore.authentication.jwtbearer.7.0.11.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.aspnetcore.cryptography.internal/7.0.11/microsoft.aspnetcore.cryptography.internal.7.0.11.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/7.0.11/microsoft.aspnetcore.cryptography.keyderivation.7.0.11.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/7.0.11/microsoft.aspnetcore.identity.entityframeworkcore.7.0.11.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.entityframeworkcore/7.0.11/microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.11/microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.11/microsoft.entityframeworkcore.analyzers.7.0.11.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.entityframeworkcore.inmemory/7.0.11/microsoft.entityframeworkcore.inmemory.7.0.11.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.11/microsoft.entityframeworkcore.relational.7.0.11.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.extensions.identity.core/7.0.11/microsoft.extensions.identity.core.7.0.11.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.extensions.identity.stores/7.0.11/microsoft.extensions.identity.stores.7.0.11.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.extensions.logging/7.0.0/microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.extensions.options/7.0.1/microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.identitymodel.abstractions/6.32.2/microsoft.identitymodel.abstractions.6.32.2.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.32.2/microsoft.identitymodel.jsonwebtokens.6.32.2.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.identitymodel.logging/6.32.2/microsoft.identitymodel.logging.6.32.2.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.identitymodel.protocols/6.15.1/microsoft.identitymodel.protocols.6.15.1.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.15.1/microsoft.identitymodel.protocols.openidconnect.6.15.1.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.identitymodel.tokens/6.32.2/microsoft.identitymodel.tokens.6.32.2.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/system.identitymodel.tokens.jwt/6.32.2/system.identitymodel.tokens.jwt.6.32.2.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/system.text.encodings.web/4.7.2/system.text.encodings.web.4.7.2.nupkg.sha512",
+    "/Users/msamual/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.IdentityModel.Tokens.Jwt' 6.32.2 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
+      "libraryId": "System.IdentityModel.Tokens.Jwt",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }
